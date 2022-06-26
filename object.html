@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+<script>
+
+{    
+    const person = {
+        firstName: "Muhammad",
+        lastName: "Iqbal"
+    };
+
+  //    Object.freeze(person);
+        Object.seal(person);
+
+    person.firstName = "Diubah";  //tidak bisa
+    person.middleName = "Ganteng"  //tidak bisa ditambah lagi
+    delete person.lastName;   //tidak bisa
+    console.info(person)
+}
+
+
+{
+    const target = {
+        firstName: "Eko"
+    };
+    const source = {
+     //   firstName: "Budi",
+        lastName: "Khenedy",
+        middleName: "Ganteng"
+    }
+
+    Object.assign(target, source)
+    console.info(target)
+    console.info(source)
+
+
+}
+
+{
+    const person = {
+        firstName: "Muhammad",
+        lastName: "Iqbal"
+    }
+
+    console.info(Object.values(person))  //untuk lihat isi atributnya
+    console.info(Object.getOwnPropertyNames(person))  //untuk lihat atribuat apa aja
+
+
+}
+
+
+
+</script>   
+</body>
+</html>
